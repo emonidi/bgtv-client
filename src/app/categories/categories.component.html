@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-xs-12">
+    <ul>
+      <li *ngFor="let tv of televisions" style="background: #ebebeb">
+        <a [routerLink]="['/watch',tv.href]">
+          <img src="{{tv.img.src}}"/>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

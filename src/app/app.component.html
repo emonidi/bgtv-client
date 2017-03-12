@@ -1,0 +1,9 @@
+<router-outlet></router-outlet>
+<ng-cast></ng-cast>
+<h1>
+  <ul>
+    <li *ngFor="let category of categories">
+      <a [routerLink]="['/watch',category.href]">{{category.content}}</a>
+    </li>
+  </ul>
+</h1>

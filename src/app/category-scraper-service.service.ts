@@ -31,7 +31,7 @@ export class CategoryScraperServiceService {
     //   }
     //   observer.next(this.categories);
     // })
-    return this.http.get('http://bgtvbackend-airpong.rhcloud.com/stations').map((res)=>res.json());
+    return this.http.get('https://bgtvbackend-airpong.rhcloud.com/stations').map((res)=>res.json());
   }
 
 }

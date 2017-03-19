@@ -61,7 +61,7 @@ export class WatchComponentComponent implements OnInit{
 
     // });
 
-    let url = "http://bgtvbackend-airpong.rhcloud.com/station?id="+link;
+    let url = "https://bgtvbackend-airpong.rhcloud.com/station?id="+link;
     this.http.get(url)
     .map(res=>res.json().url)
     .subscribe(res=>{

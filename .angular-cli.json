@@ -21,7 +21,9 @@
       "styles": [
         "styles.css",
         "../node_modules/mediaelement/build/mediaelementplayer.css",
-        "../node_modules/videogular2/fonts/videogular.css"
+        "../node_modules/videogular2/fonts/videogular.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "assets/eco.css"
       ],
       "scripts": [
         "assets/hls.js",

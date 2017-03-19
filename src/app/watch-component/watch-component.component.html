@@ -1,1 +1,27 @@
-<button (click)="stop()" *ngIf="ngCastService.getStatus().casting" md-raised-button color="primary"><md-icon style="padding-top:10px;">stop</md-icon></button>
+<vg-player (onPlayerReady)="onPlayerReady($event)">
+    <vg-overlay-play></vg-overlay-play>
+    <vg-buffering></vg-buffering>
+
+    <vg-scrub-bar>
+        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+        <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+    </vg-scrub-bar>
+
+    <vg-controls>
+        <vg-play-pause></vg-play-pause>
+        <vg-playback-button></vg-playback-button>
+
+
+
+       
+        <vg-mute></vg-mute>
+        <vg-volume></vg-volume>
+
+        <vg-fullscreen></vg-fullscreen>
+        <ng-cast (click)="cast()"></ng-cast>
+    </vg-controls>
+
+    <video [vgMedia]="media" #media id="singleVideo" [vgHls]="currentStream" preload="auto" crossorigin>
+        <source [src]="currentStream" [type]="application/x-mpegURL">
+    </video>
+</vg-player>

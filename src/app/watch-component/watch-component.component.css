@@ -1,12 +1,11 @@
-.video-container{
-		padding: 5%;
-		margin: 0 auto !important;
+ng-cast{
+    font-size: 30px;
+    color: #fff;
+    line-height: 47px;
 
-	}
+}
 
-
-
-body,html{
-	margin: 0;
-	padding:0;
+video{
+	width:100%;
+	/*min-height: 400px;*/
 }

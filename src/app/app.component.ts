@@ -16,11 +16,15 @@ export class AppComponent implements  OnChanges{
   private categories:any;
   private showChannels:boolean;
 
-  constructor(private categoryScraper:CategoryScraperServiceService){
+  constructor(private categoryScraper:CategoryScraperServiceService, private ngCastService:NgCastService){
     this.categoryScraper.getCategories().subscribe(categories=>{
       console.log(categories);
       this.categories = categories;
-    })
+    });
+
+    window.onbeforeunload = ()=>{
+      this.ngCastService['cast'].castSession.addUpdateListener()
+    }
   }
 
   ngOnChanges(change:any){

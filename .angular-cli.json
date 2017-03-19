@@ -20,7 +20,8 @@
       "prefix": "app",
       "styles": [
         "styles.css",
-        "../node_modules/mediaelement/build/mediaelementplayer.css"
+        "../node_modules/mediaelement/build/mediaelementplayer.css",
+        "../node_modules/videogular2/fonts/videogular.css"
       ],
       "scripts": [
         "assets/hls.js",

@@ -2,7 +2,7 @@
 <h1>
   <ul>
     <li *ngFor="let category of categories">
-      <a [routerLink]="['/watch',category.href]">{{category.content}}</a>
+      <a [routerLink]="['/watch',category.href]">{{category.name}}</a>
     </li>
   </ul>
 </h1>

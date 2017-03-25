@@ -21,7 +21,7 @@
         <ng-cast (click)="cast()"></ng-cast>
     </vg-controls>
 
-    <video [vgMedia]="media" #media id="singleVideo" [vgHls]="currentStream" preload="auto" crossorigin>
-        <source [src]="currentStream" [type]="application/x-mpegURL">
+    <video [vgMedia]="media" #media id="singleVideo" [vgHls]="corsStream" preload="auto" crossorigin>
+        <source [src]="corsStream" [type]="application/x-mpegURL">
     </video>
 </vg-player>

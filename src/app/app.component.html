@@ -1,6 +1,19 @@
 <router-outlet></router-outlet>
 <ul class="list-group">
     <li class="list-group-item" *ngFor="let category of categories">
-      <a style="display: block" [routerLink]="['/watch',category.href]">{{category.content}}</a>
+      <a style="display: block" [routerLink]="['/watch',category.href]">{{category.name}}</a>
     </li>
-  </ul>
+</ul>
+
+<!--<div class="row" *ngFor="let category of categories" [routerLink]="['/watch',category.href]">
+  <div class="col-xs-12">
+    <div class="media">
+      <div class="media-left">
+        <img class="media-object" src="http://seirsanduk.com/{{category.img}}"/>
+      </div>
+      <div class="media-body">
+        <h4>{{category.name}}</h4>
+      </div>
+    </div>
+  </div>
+</div>-->

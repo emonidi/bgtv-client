@@ -1,0 +1,8 @@
+md-list{
+    background-color: #303030;
+}
+md-list-item a,md-list-item a:hover, md-list-item a:active,md-list-item a:focus{
+    color:#fff;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,15 +1,5 @@
 html,body{
 	padding: 0 !important;
 	margin:0 !important;
-}
-
-.list-group{
-    position: fixed !important;
-    width: 100%;
-    overflow: auto;
-    height: 100%;
-}
-
-.list-group li a:active,.list-group li a:focus,.list-group li a:hover{
-	text-decoration:none;
+    background: #303030;
 }

@@ -1,0 +1,12 @@
+<!--<div class="">
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let category of categories">
+      <a style="display: block" [routerLink]="['/watch',category.href]">{{category.name}}</a>
+    </li>
+</ul>
+</div>-->
+<md-list>
+  <md-list-item *ngFor="let category of categories">
+     <a md-line [routerLink]="['/watch',category.href]">{{category.name}}</a>
+  </md-list-item>
+</md-list>

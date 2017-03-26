@@ -30,6 +30,7 @@
     "core-js": "^2.4.1",
     "mediaelement": "^3.2.3",
     "ng-cast": "0.0.2",
+    "ng2-adsense": "^2.1.5",
     "ng2-flex-layout": "^0.1.5",
     "ng2-jwplayer": "^1.0.0-alpha.1",
     "rxjs": "^5.1.0",

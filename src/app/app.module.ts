@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { WatchComponentComponent } from './watch-component/watch-component.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { MaterialModule } from '@angular/material';
+import { AdsenseModule } from 'ng2-adsense';
 
 import { MdIconModule, MdIconRegistry } from '@angular2-material/icon';
 import { MdButtonModule } from '@angular2-material/button';
@@ -48,6 +49,10 @@ const routes:Routes = <Routes>[
     FlexLayoutModule,
     VgStreamingModule,
     MaterialModule,
+     AdsenseModule.forRoot({
+      adClient: 'ca-pub-7905036614069244',
+      adSlot: 9305048734
+    }),
       RouterModule.forRoot(routes)
   ],
   providers: [MdIconRegistry],

@@ -13,7 +13,7 @@ export class ChannelListComponent implements OnInit {
 
 private categories:any;
   private showChannels:boolean;
-
+ innerWidth = window.innerWidth;
   constructor(private categoryScraper: CategoryScraperServiceService, private ngCastService: NgCastService, private elRef: ElementRef) {
     this.categoryScraper.getCategories().subscribe((categories) => {
       console.log(categories);

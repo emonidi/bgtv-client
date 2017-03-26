@@ -44,25 +44,6 @@ export class WatchComponentComponent implements OnInit{
   }
 
   getScript(link:string){
-    console.log(window['chrome'].cast)
-    console.log(link);
-    // let url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D'http%3A%2F%2Fwww.seirsanduk.com/"+link+"'%20and%20xpath%3D'.%2F%2Fscript'&format=json&callback="
-    // this.http.get(url)
-    // .map(res=>res.json().query.results.script)
-    // .subscribe(res=>{
-    //   this.currentStream = 'https://cors-anywhere.herokuapp.com/'+ res.filter(item=>{
-    //     if(item.content && item.content.indexOf('jwplayer("Element")') > 0){
-    //       return item;
-    //     }
-    //   })[0].content.split("file:")[1].split(",")[0].replace(/\"/ig,'');
-    //   if(this.ngCastService.getStatus().casting){
-    //     this.ngCastService.launchMedia(this.currentStream);
-    //   }else{
-    //     this.api.play();
-    //   }
-
-    // });
-
     let url = "https://bgtvbackend-airpong.rhcloud.com/station?id="+link;
     this.http.get(url)
     .map(res=>res.json().url)

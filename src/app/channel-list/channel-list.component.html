@@ -5,12 +5,7 @@
     </li>
 </ul>
 </div>-->
-<ng2-adsense 
-  [adClient]="'ca-pub-7905036614069244'"
-  [adSlot]="9305048734"
-  [display]="'inline-block'"
-  [width]="innerWidth"
-  [height]="108">></ng2-adsense>
+
 <md-list>
   <md-list-item *ngFor="let category of categories">
      <a md-line [routerLink]="['/watch',category.href]">{{category.name}}</a>

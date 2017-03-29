@@ -8,4 +8,6 @@ import { Component, ViewEncapsulation, OnChanges } from '@angular/core';
   encapsulation:ViewEncapsulation.None
 })
 
-export class AppComponent{}
+export class AppComponent{
+  innerWidth = window.innerWidth;
+}

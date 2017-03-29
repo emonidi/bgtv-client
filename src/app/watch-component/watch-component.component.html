@@ -1,6 +1,12 @@
 <div fxHide.xs fxHide.sm fxShow.md fxShow.lg>
     <md-sidenav-container>
   <md-sidenav mode="side" opened="true"> 
+      <ng2-adsense 
+  [adClient]="'ca-pub-7905036614069244'"
+  [adSlot]="9305048734"
+  [display]="'inline-block'"
+  [width]="innerWidth"
+  [height]="108">></ng2-adsense>
     <app-channel-list></app-channel-list>
   </md-sidenav>
 <vg-player (onPlayerReady)="onPlayerReady($event)">
@@ -29,6 +35,7 @@
 </md-sidenav-container>
 </div>
 <div layout="column" fxLayoutAlign="none" fullscreen fxShow.xs fxShow.sm fxHide.md fxHide.lg>
+    
     <div>
         <vg-player (onPlayerReady)="onPlayerReady($event)">
             <vg-overlay-play></vg-overlay-play>

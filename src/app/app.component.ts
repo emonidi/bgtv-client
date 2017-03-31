@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnChanges, OnInit,NgZone } from '@angular/core';
+import { Component, ViewEncapsulation, OnChanges, OnInit,NgZone, ViewChild } from '@angular/core';
 import { Router,NavigationStart } from '@angular/router';
 
 
@@ -11,7 +11,7 @@ import { Router,NavigationStart } from '@angular/router';
 
 export class AppComponent implements OnInit{
   innerWidth = window.innerWidth;
-
+  @ViewChild('ng2adsense') ng2adsense: ViewChild;
   constructor(private router: Router, private zone: NgZone){}
 
   ngOnInit(){
@@ -20,7 +20,9 @@ export class AppComponent implements OnInit{
       return event instanceof NavigationStart
     })
     .subscribe((change)=>{
-       this.zone.run(()=>{});
+       this.zone.run(()=>{
+       (this.ng2adsense as any).push({});
+       });
     })
   }
 }

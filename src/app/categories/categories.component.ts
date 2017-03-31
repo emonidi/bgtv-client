@@ -26,7 +26,6 @@ export class CategoriesComponent implements OnInit {
       this.televisions = res.map(item=>{
         return Object.assign(item,{href:item.href.split("http://www.bg-gledai.tv/")[1]})
       });
-      console.log(this.televisions);
     })
   }
 

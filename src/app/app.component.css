@@ -3,3 +3,7 @@ html,body{
 	margin:0 !important;
     background: #303030;
 }
+
+ng2-adsense div{
+	padding:0 !important;
+}

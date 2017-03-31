@@ -5,7 +5,6 @@
     </li>
 </ul>
 </div>-->
-
 <md-list>
   <md-list-item *ngFor="let category of categories">
      <a md-line [routerLink]="['/watch',category.href]">{{category.name}}</a>

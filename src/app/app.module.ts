@@ -21,7 +21,7 @@ import { VgOverlayPlayModule } from "videogular2/overlay-play";
 import { VgBufferingModule } from "videogular2/buffering";
 import { VgStreamingModule } from "videogular2/streaming";
 import { ChannelListComponent } from './channel-list/channel-list.component';
-
+import { VgImaAdsModule } from 'videogular2/ima-ads';
 
 const routes:Routes = <Routes>[
   {path: '', component:ChannelListComponent},
@@ -49,6 +49,7 @@ const routes:Routes = <Routes>[
     FlexLayoutModule,
     VgStreamingModule,
     MaterialModule,
+    VgImaAdsModule,
      AdsenseModule.forRoot({
       adClient: 'ca-pub-7905036614069244',
       adSlot: 9305048734

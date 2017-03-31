@@ -44,7 +44,6 @@ export class ChromeCastService {
  
   connectWithClient(){
     let subject = new Subject();
-    console.log(this.chrome);
     this.chrome.cast.requestSession((session)=>{
       this.session = session;
     })

@@ -1,18 +1,18 @@
 <div fxHide.xs fxHide.sm fxShow.md fxShow.lg>
     <md-sidenav-container>
   <md-sidenav mode="side" opened="true"> 
-      <ng2-adsense 
-  [adClient]="'ca-pub-7905036614069244'"
-  [adSlot]="9305048734"
-  [display]="'inline-block'"
-  [width]="innerWidth"
-  [height]="108">></ng2-adsense>
     <app-channel-list></app-channel-list>
   </md-sidenav>
+
 <vg-player (onPlayerReady)="onPlayerReady($event)">
+            
+              <!--<vg-ima-ads [vgFor]="singleVideo" [vgSkipButton]="skip" [vgAdTagUrl]="'http://googleads.g.doubleclick.net/pagead/ads?ad_type=video&client=ca-video-pub-4968145218643279&videoad_start_delay=0&description_url=http%3A%2F%2Fwww.google.com&max_ad_duration=40000&adtest=on'">
+                 <button id="skip">skip</button>
+            </vg-ima-ads>-->
+            
             <vg-overlay-play></vg-overlay-play>
             <vg-buffering></vg-buffering>
-
+            
             <vg-scrub-bar>
                 <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
                 <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>

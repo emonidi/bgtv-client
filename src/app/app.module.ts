@@ -22,6 +22,7 @@ import { VgBufferingModule } from "videogular2/buffering";
 import { VgStreamingModule } from "videogular2/streaming";
 import { ChannelListComponent } from './channel-list/channel-list.component';
 import { VgImaAdsModule } from 'videogular2/ima-ads';
+import { VideoComponent } from './video/video.component';
 
 const routes:Routes = <Routes>[
   {path: '', component:ChannelListComponent},
@@ -34,7 +35,8 @@ const routes:Routes = <Routes>[
     AppComponent,
     WatchComponentComponent,
     CategoriesComponent,
-    ChannelListComponent
+    ChannelListComponent,
+    VideoComponent
   ],
   imports: [
     BrowserModule,

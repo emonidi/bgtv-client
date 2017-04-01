@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host 192.168.2.103",
     "build": "ng build --prod --aot",
     "test": "ng test",
     "lint": "ng lint",
@@ -26,6 +26,7 @@
     "@angular2-material/icon": "^2.0.0-alpha.8-2",
     "@angular2-material/sidenav": "^2.0.0-alpha.8-2",
     "@types/jwplayer": "^6.0.0",
+    "@types/videojs": "^5.16.2",
     "bootstrap": "^3.3.7",
     "core-js": "^2.4.1",
     "mediaelement": "^3.2.3",
@@ -34,9 +35,11 @@
     "ng2-flex-layout": "^0.1.5",
     "ng2-jwplayer": "^1.0.0-alpha.1",
     "rxjs": "^5.1.0",
+    "video.js": "^5.19.0",
     "videogular": "^1.4.4",
     "videogular-dash": "^1.4.4",
     "videogular2": "^4.2.0",
+    "videojs-contrib-hls": "^5.3.3",
     "zone.js": "^0.7.6"
   },
   "devDependencies": {
@@ -50,12 +53,13 @@
     "karma": "~1.4.1",
     "karma-chrome-launcher": "~2.0.0",
     "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-coverage-istanbul-reporter": "^0.2.0",
     "protractor": "~5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.4.2",
-    "typescript": "~2.0.0"
+    "typescript": "~2.0.0",
+    "video.js": "^5.19.0"
   }
 }

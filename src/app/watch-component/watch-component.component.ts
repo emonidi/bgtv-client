@@ -62,16 +62,16 @@ export class WatchComponentComponent implements OnInit{
   }
 
   cast(){
-    this.ngCastService.initializeCastApi();
-    let interval = setInterval(()=>{
-      if(this.ngCastService.getStatus().casting){
-        this.ngCastService.launchMedia(this.currentStream);
-        this.api.pause();
-        clearInterval(interval);
-      }
-    },500)
+    // this.ngCastService.initializeCastApi();
+    // let interval = setInterval(()=>{
+    //   if(this.ngCastService.getStatus().casting){
+    //     this.ngCastService.launchMedia(this.currentStream);
+    //     this.api.pause();
+    //     clearInterval(interval);
+    //   }
+    // },500)
 
-    window.onbeforeunload = ()=>this.ngCastService.stop();
+    // window.onbeforeunload = ()=>this.ngCastService.stop();
   }
 
   stop(){

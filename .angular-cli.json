@@ -23,13 +23,17 @@
         "../node_modules/videogular2/fonts/videogular.css",
         "../node_modules/ng2-flex-layout/dist/ng2-flex-layout.css",
         "../node_modules/@angular/material/core/theming/prebuilt/purple-green.css",
-        "../node_modules/video.js/dist/video-js.min.css"
+        "../node_modules/video.js/dist/video-js.min.css",
+        "../node_modules/videojs-ima/src/videojs.ima.css",
+        "../node_modules/videojs-contrib-ads/dist/videojs.ads.css"
       ],
       "scripts": [
         "assets/hls.js",
         "../node_modules/mediaelement/build/mediaelementplayer.js",
         "../node_modules/video.js/dist/video.min.js",
-        "../node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js"
+        "../node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js",
+        "../node_modules/videojs-ima/src/videojs.ima.js",
+        "../node_modules/videojs-contrib-ads/dist/videojs.ads.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

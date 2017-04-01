@@ -16,6 +16,7 @@ declare var chrome:any;
 })
 export class WatchComponentComponent implements OnInit{
   api:VgAPI;
+  innerWidth:number = window.innerWidth;
   private headers:Headers;
   private currentStream:string;
   private corsStream:string;
@@ -35,7 +36,8 @@ export class WatchComponentComponent implements OnInit{
   }
 
   ngOnInit(){
-  
+    this.innerWidth = window.innerWidth;
+    console.log(this.innerWidth);
   }
 
 
@@ -53,7 +55,7 @@ export class WatchComponentComponent implements OnInit{
       if(this.ngCastService.getStatus().casting){
         this.ngCastService.launchMedia(this.currentStream);
       }else{
-        this.api.play();
+        //  this.api.play();
       }
 
     });

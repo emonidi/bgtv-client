@@ -20,8 +20,8 @@ export class AppComponent implements OnInit{
       return event instanceof NavigationStart
     })
     .subscribe((change)=>{
-       this.zone.run(()=>{
-       (this.ng2adsense as any).push({});
+       this.zone.runOutsideAngular(()=>{
+        (this.ng2adsense as any).push({});
        });
     })
   }

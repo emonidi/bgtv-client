@@ -26,19 +26,10 @@ private categories:any;
   }
 
   ngOnInit() {
-    this.setLayout();
-    window.onresize = () => {
-      this.setLayout();
-    };
+   
   }
 
 
-  setLayout(){
-    const list = this.elRef.nativeElement.querySelector('md-list');
-
-      list.style.height = 'calc(100vh - ' + (list.offsetTop) + 'px)';
-      list.style.overflow = 'scroll';
-  }
 
   route(link){
     console.log(link)

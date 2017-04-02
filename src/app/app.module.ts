@@ -10,7 +10,6 @@ import { WatchComponentComponent } from './watch-component/watch-component.compo
 import { CategoriesComponent } from './categories/categories.component';
 import { MaterialModule } from '@angular/material';
 import { AdsenseModule } from 'ng2-adsense';
-
 import { MdIconModule, MdIconRegistry } from '@angular2-material/icon';
 import { MdButtonModule } from '@angular2-material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -23,9 +22,10 @@ import { VgStreamingModule } from "videogular2/streaming";
 import { ChannelListComponent } from './channel-list/channel-list.component';
 import { VgImaAdsModule } from 'videogular2/ima-ads';
 import { VideoComponent } from './video/video.component';
+import { HomeComponent } from './home/home.component';
 
 const routes:Routes = <Routes>[
-  {path: '', component:ChannelListComponent},
+  {path: '', component:HomeComponent},
   {path: 'watch/:tv', component: WatchComponentComponent}
 ]
 
@@ -36,7 +36,8 @@ const routes:Routes = <Routes>[
     WatchComponentComponent,
     CategoriesComponent,
     ChannelListComponent,
-    VideoComponent
+    VideoComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

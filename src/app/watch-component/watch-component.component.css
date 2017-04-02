@@ -1,15 +1,3 @@
-ng-cast{
-    font-size: 30px;
-    color: #fff;
-    line-height: 47px;
-
-}
-
-md-list{
-    height: calc(100vh - 64px) !important;
-}
-
-video{
-	width:100%;
-	/*min-height: 400px;*/
+.component-container{
+    height: 100vh;
 }

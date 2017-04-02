@@ -16,6 +16,7 @@ declare var chrome:any;
 })
 export class WatchComponentComponent implements OnInit{
   api:VgAPI;
+  opened:boolean = false;
   innerWidth:number = window.innerWidth;
   private headers:Headers;
   private currentStream:string;

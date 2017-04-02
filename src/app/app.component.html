@@ -1,12 +1,15 @@
 <md-toolbar color="primary">
-  <span>BGTV</span>
+  <span>
+    <i (click)="toggleMenu()" class="material-icons demo-toolbar-icon">menu</i>
+    <span class="title">BGTV</span>
+  </span>
 </md-toolbar>
-  <ng2-adsense
-  #ng2adsense 
-  [adClient]="'ca-pub-7905036614069244'"
-  [adSlot]="9305048734"
-  [display]="'inline-block'"
-  [width]="innerWidth"
-  [height]="108">></ng2-adsense>
-<router-outlet></router-outlet>
+  
+  <md-sidenav-container>
+  <md-sidenav [opened]="opened">
+    <app-channel-list></app-channel-list>
+  </md-sidenav>
+  <router-outlet></router-outlet>
+</md-sidenav-container>
+
 

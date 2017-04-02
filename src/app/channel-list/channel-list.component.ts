@@ -1,6 +1,7 @@
 import { Component, OnInit, ElementRef } from '@angular/core';
 import { CategoryScraperServiceService } from '../category-scraper-service.service';
 import { NgCastService } from 'ng-cast';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-channel-list',
@@ -39,6 +40,10 @@ private categories:any;
         list.style.height = 'calc(100vh - ' + (list.offsetTop) + 'px)';
         list.style.overflow = 'scroll';
       }
+  }
+
+  route(link){
+    console.log(link)
   }
 
 }

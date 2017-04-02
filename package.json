@@ -39,7 +39,9 @@
     "videogular": "^1.4.4",
     "videogular-dash": "^1.4.4",
     "videogular2": "^4.2.0",
+    "videojs-contrib-ads": "^4.2.5",
     "videojs-contrib-hls": "^5.3.3",
+    "videojs-ima": "^0.5.0",
     "zone.js": "^0.7.6"
   },
   "devDependencies": {

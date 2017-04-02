@@ -36,10 +36,8 @@ private categories:any;
   setLayout(){
     const list = this.elRef.nativeElement.querySelector('md-list');
 
-      if(window.innerWidth < 768) {
-        list.style.height = 'calc(100vh - ' + (list.offsetTop) + 'px)';
-        list.style.overflow = 'scroll';
-      }
+      list.style.height = 'calc(100vh - ' + (list.offsetTop) + 'px)';
+      list.style.overflow = 'scroll';
   }
 
   route(link){

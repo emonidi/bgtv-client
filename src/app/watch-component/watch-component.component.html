@@ -1,2 +1,11 @@
-<app-video [source]="currentStream" width="innerWidth"></app-video>
-<app-channel-list></app-channel-list>
+<div class="row">
+    <div class="col-lg-2 hidden-xs hidden-sm hidden-md" style="max-height: 100%;overflow: scroll">
+        <app-channel-list></app-channel-list>
+    </div>
+    <div class="col-xs-12 col-lg-10">
+        <app-video [source]="currentStream" width="innerWidth"></app-video>
+    </div>
+    <div class="col-xs-12 col-lg-10 hidden-lg">
+        <app-channel-list></app-channel-list>
+    </div>
+</div>

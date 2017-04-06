@@ -51,7 +51,7 @@ export class WatchComponentComponent implements OnInit{
     this.http.get(url)
     .map(res=>res.json().url)
     .subscribe(res=>{
-      this.corsStream = 'https://cors-anywhere.herokuapp.com/'+res;
+      this.corsStream = 'https://cors-airpong.rhcloud.com/'+res;
       this.currentStream = res;
       if(this.ngCastService.getStatus().casting){
         this.ngCastService.launchMedia(this.currentStream);

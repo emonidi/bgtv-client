@@ -1,6 +1,4 @@
 <div>
-    <ng2-adsense #ng2adsense [adClient]="'ca-pub-7905036614069244'" [adSlot]="9305048734" [display]="'inline-block'" [width]="innerWidth"
-        [height]="108">></ng2-adsense>
     <vg-player>
         <vg-overlay-play></vg-overlay-play>
         <vg-buffering></vg-buffering>
@@ -33,7 +31,7 @@
                 <video #video [vgMedia]="media" #media id="singleVideo" [vgHls]="src" preload="auto" crossorigin>
                     <source [src]="src" [type]="application/x-mpegURL">
                 </video>
-                <div id="adContainer"></div>
+                <!--<div id="adContainer"></div>-->
 
     </vg-player>
 </div>

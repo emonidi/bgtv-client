@@ -18,7 +18,7 @@ export class VideoComponent implements AfterViewInit, OnChanges {
   constructor() { }
 
   ngAfterViewInit() {
-    this.initAdContainer();
+    //this.initAdContainer();
   }
 
   ngOnChanges(change: any) {
@@ -97,7 +97,7 @@ export class VideoComponent implements AfterViewInit, OnChanges {
 
       try {
         // Initialize the ads manager. Ad rules playlist will start at this time.
-        adsManager.init(videoContent.clientWidth, videoContent.clientHeight, google.ima.ViewMode.NORMAL);
+        adsManager. init(videoContent.clientWidth, videoContent.clientHeight, google.ima.ViewMode.NORMAL);
         // Call start to show ads. Single video and overlay ads will
         // start at this time; this call will be ignored for ad rules, as ad rules
         // ads start when the adsManager is initialized.

@@ -1,0 +1,10 @@
+ng-cast{
+    margin-top:13px;
+}
+#adContainer {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 640px;
+  height: 360px;
+  }

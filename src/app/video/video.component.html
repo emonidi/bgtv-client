@@ -1,3 +1,28 @@
-<video id="content_video" class="video-js vjs-default-skin vjs-16-9" controls playsinline="true" webkit-playsinline="true">
-  
-</video>
+<div>
+    <vg-player (onPlayerReady)="onPlayerReady($event)">
+        <vg-overlay-play (click)="play(event)"></vg-overlay-play>
+        <vg-buffering></vg-buffering>
+
+        <!--<vg-scrub-bar>
+        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+        <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+    </vg-scrub-bar>-->
+
+        <vg-controls>
+            <vg-play-pause></vg-play-pause>
+            <vg-playback-button (click)="play(event)"></vg-playback-button>
+            <vg-mute></vg-mute>
+            <vg-volume></vg-volume>
+
+
+            <vg-fullscreen></vg-fullscreen>
+            <ng-cast (click)="onCastButtonClick()"></ng-cast>
+        </vg-controls>
+
+                <video #video [vgMedia]="media" #media id="singleVideo" [vgDash]="src" [vgHls]="src" preload="auto" crossorigin>
+                    <source [src]="src" [type]="type">
+                </video>
+                <!--<div id="adContainer"></div>-->
+
+    </vg-player>
+</div>

@@ -7,3 +7,16 @@ html,body{
 ng2-adsense div{
 	padding:0 !important;
 }
+
+.title{
+	font-size: 16px;
+    margin-top: 1px;
+    position: absolute;
+    margin-left: 10px;
+}
+
+md-toolbar a, md-toolbar a:hover, md-toolbar a:focus{
+    color:#fff;
+    text-decoration: none;
+    cursor: pointer;
+}

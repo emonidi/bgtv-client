@@ -18,6 +18,7 @@ private categories:any;
   constructor(private categoryScraper: CategoryScraperServiceService, private ngCastService: NgCastService, private elRef: ElementRef) {
     this.categoryScraper.getCategories().subscribe((categories) => {
       this.categories = categories;
+      (window as any).prerenderReady = true;
     });
 
     window.onbeforeunload = () => {

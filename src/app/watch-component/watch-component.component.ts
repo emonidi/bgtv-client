@@ -44,6 +44,7 @@ export class WatchComponentComponent implements OnInit{
   // }
 
   getScript(link:string){
+    console.log(link)
     let url = "https://bgtvbackend-airpong.rhcloud.com/station?id="+link;
     this.http.get(url)
     .map(res=>res.json().url)

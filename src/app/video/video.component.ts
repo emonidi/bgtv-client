@@ -2,6 +2,8 @@ import { Component, AfterViewInit, ViewChild, Input, ElementRef, OnChanges, OnIn
 import { NgCastService } from 'ng-cast';
 import { VgAPI } from 'videogular2/core';
 declare var google: any;
+declare var adsbygoogle: any;
+
 
 @Component({
   selector: 'app-video',
@@ -25,6 +27,7 @@ export class VideoComponent implements OnInit, OnChanges {
 
   ngOnInit() {
     //this.initAdContainer();
+    (adsbygoogle = (window as any).adsbygoogle || []).push({});
   }
 
   play(ev){
@@ -56,6 +59,7 @@ export class VideoComponent implements OnInit, OnChanges {
     if (change.source && change.source.currentValue) {
       this.src = change.source.currentValue;
       this.type = 'application/x-mpegURL';
+      
     }
   }
 

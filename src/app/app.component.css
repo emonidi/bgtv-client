@@ -20,3 +20,10 @@ md-toolbar a, md-toolbar a:hover, md-toolbar a:focus{
     text-decoration: none;
     cursor: pointer;
 }
+
+.disclaimer{
+    color:#fff;
+    font-size: 0.8em;
+    text-align: center;
+    padding:10px;
+}

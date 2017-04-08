@@ -14,3 +14,9 @@ ng2-adsense div{
     position: absolute;
     margin-left: 10px;
 }
+
+md-toolbar a, md-toolbar a:hover, md-toolbar a:focus{
+    color:#fff;
+    text-decoration: none;
+    cursor: pointer;
+}

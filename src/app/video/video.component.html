@@ -1,6 +1,6 @@
 <div>
-    <vg-player>
-        <vg-overlay-play></vg-overlay-play>
+    <vg-player (onPlayerReady)="onPlayerReady($event)">
+        <vg-overlay-play (click)="play(event)"></vg-overlay-play>
         <vg-buffering></vg-buffering>
 
         <!--<vg-scrub-bar>
@@ -10,26 +10,17 @@
 
         <vg-controls>
             <vg-play-pause></vg-play-pause>
-            <vg-playback-button></vg-playback-button>
-
-            <!--<vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>-->
-
-            <!--<vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>-->
-
-            <!--<vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
-        <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>-->
-
-            <!--<vg-track-selector></vg-track-selector>-->
+            <vg-playback-button (click)="play(event)"></vg-playback-button>
             <vg-mute></vg-mute>
             <vg-volume></vg-volume>
 
 
             <vg-fullscreen></vg-fullscreen>
-            <ng-cast></ng-cast>
+            <ng-cast (click)="onCastButtonClick()"></ng-cast>
         </vg-controls>
 
-                <video #video [vgMedia]="media" #media id="singleVideo" [vgHls]="src" preload="auto" crossorigin>
-                    <source [src]="src" [type]="application/x-mpegURL">
+                <video #video [vgMedia]="media" #media id="singleVideo" [vgDash]="src" [vgHls]="src" preload="auto" crossorigin>
+                    <source [src]="src" [type]="type">
                 </video>
                 <!--<div id="adContainer"></div>-->
 

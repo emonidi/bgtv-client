@@ -1,4 +1,6 @@
 import { Component, AfterViewInit, ViewChild, Input, ElementRef, OnChanges, OnInit } from '@angular/core';
+import { NgCastService } from 'ng-cast';
+import { VgAPI } from 'videogular2/core';
 declare var google: any;
 
 @Component({
@@ -6,25 +8,54 @@ declare var google: any;
   templateUrl: './video.component.html',
   styleUrls: ['./video.component.css']
 })
-export class VideoComponent implements AfterViewInit, OnChanges {
+export class VideoComponent implements OnInit, OnChanges {
 
   @ViewChild('video') video: ElementRef;
   @Input() source: string;
+  @Input() castStream: string;
   public src: any;
   videoPlayer: any;
+  playerApi:any;
   startEvent: any;
+  type:any = 'application/x-mpegURL';
   options: any;
   private adsLoader: any;
-  constructor() { }
+  private isCasting:boolean = false;
+  constructor(private ngCastService:NgCastService) { }
 
-  ngAfterViewInit() {
+  ngOnInit() {
     //this.initAdContainer();
+  }
+
+  play(ev){
+    //this.video.nativeElement.play();
+  }
+
+  onPlayerReady(player){
+    this.playerApi = player;
+  }
+
+  onCastButtonClick(){
+    this.ngCastService.initializeCastApi();
+    let interval = setInterval(()=>{
+     
+      if(this.ngCastService.getStatus().casting){
+        this.ngCastService.launchMedia(this.castStream);
+        // this.api.pause();
+        clearInterval(interval);
+        console.log('casting interval')
+      }
+    },500)
+
+    window.onbeforeunload = ()=>this.ngCastService.stop();
+
   }
 
   ngOnChanges(change: any) {
 
     if (change.source && change.source.currentValue) {
       this.src = change.source.currentValue;
+      this.type = 'application/x-mpegURL';
     }
   }
 

@@ -1,13 +1,13 @@
 <md-toolbar color="primary">
   <span>
-    <i (click)="toggleMenu()" class="material-icons demo-toolbar-icon">menu</i>
-    <span class="title">BGTV - Българска телевизия</span>
+    <a (click)="toggleMenu()" class="material-icons demo-toolbar-icon">menu</a>
+    <a class="title">BGTV - Българска телевизия</a>
   </span>
 </md-toolbar>
   
   <md-sidenav-container>
   <md-sidenav [opened]="opened">
-    <app-channel-list></app-channel-list>
+    <app-channel-list (click)="toggleMenu()"></app-channel-list>
   </md-sidenav>
   <router-outlet></router-outlet>
 </md-sidenav-container>
